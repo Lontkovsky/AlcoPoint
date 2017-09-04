@@ -13,12 +13,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void toMain(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
-
     public void toChat(View view)
     {
         Intent intent = new Intent(MainActivity.this, ChatActivity.class);
