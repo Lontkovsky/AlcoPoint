@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="toMain"
             android:text="main" />
 
         <Button
@@ -22,21 +23,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="chat" />
+            android:text="chat"
+            android:onClick="toChat"/>
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="prof" />
+            android:text="prof"
+            android:onClick="toProfile"/>
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="sett" />
+            android:text="sett"
+            android:onClick="toSettings"/>
 
 
     </LinearLayout>
