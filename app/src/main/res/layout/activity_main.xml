@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/table_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.root.alcopoint.MainActivity">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+    <LinearLayout>
 
         <Button
             android:id="@+id/button"
+            android:layout_gravity=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="main"
-            />
+            android:background="@color/colorPrimaryDark"
+            android:text="main" />
 
         <Button
             android:id="@+id/button2"
@@ -41,7 +40,221 @@
             android:text="sett"
             android:onClick="toSettings"/>
 
-
     </LinearLayout>
 
-</LinearLayout>
+    <TableRow
+        android:id="@+id/row_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash1"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash2"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash3"
+            android:textColor="#fff" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash1"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash2"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash3"
+            android:textColor="#fff" />
+
+
+    </TableRow>
+
+
+
+    <TableRow
+        android:id="@+id/row_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash4"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#00000"
+            android:gravity="center"
+            android:padding="32dp"
+            android:textAllCaps="true"
+            android:text="PROFILE"
+            android:onClick="toProfile"
+            android:textColor="#ed8404" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash5"
+            android:textColor="#fff" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash6"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash7"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash8"
+            android:textColor="#fff" />
+    </TableRow>
+
+
+
+    <TableRow
+        android:id="@+id/row_5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash1"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash2"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ed8404"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="Alkash3"
+            android:textColor="#fff" />
+
+
+    </TableRow>
+
+    <LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Rotate"/>
+    </LinearLayout>
+
+
+</TableLayout>
