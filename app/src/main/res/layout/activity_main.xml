@@ -47,18 +47,21 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/section1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/q" />
 
         <ImageView
+            android:id="@+id/section2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/w" />
 
         <ImageView
+            android:id="@+id/section3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -75,18 +78,21 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/section4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/r" />
 
         <ImageView
+            android:id="@+id/profile_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/t" />
 
         <ImageView
+            android:id="@+id/section5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -99,17 +105,20 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/section6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/w" />
 
         <ImageView
+            android:id="@+id/section7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/y" />
         <ImageView
+            android:id="@+id/section8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -128,13 +137,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="-"
+            android:onClick="changeMinus"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="+"/>
+            android:text="+"
+            android:onClick="changePlus"/>
 
     </LinearLayout>
 
