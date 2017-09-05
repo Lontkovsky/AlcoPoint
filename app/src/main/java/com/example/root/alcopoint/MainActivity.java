@@ -74,14 +74,14 @@ public class MainActivity extends AppCompatActivity {
         ImageView img6 = (ImageView) findViewById(R.id.section6);
         ImageView img7 = (ImageView) findViewById(R.id.section7);
         ImageView img8 = (ImageView) findViewById(R.id.section8);
-        img1.setImageResource(userImageList[rand-1]);
-        img2.setImageResource(userImageList[rand-1]);
-        img3.setImageResource(userImageList[rand-1]);
-        img4.setImageResource(userImageList[rand-1]);
-        img5.setImageResource(userImageList[rand-1]);
-        img6.setImageResource(userImageList[rand-1]);
-        img7.setImageResource(userImageList[rand-1]);
-        img8.setImageResource(userImageList[rand-1]);
+        img1.setImageResource(userImageList[rand]);
+        img2.setImageResource(userImageList[rand]);
+        img3.setImageResource(userImageList[rand]);
+        img4.setImageResource(userImageList[rand]);
+        img5.setImageResource(userImageList[rand]);
+        img6.setImageResource(userImageList[rand]);
+        img7.setImageResource(userImageList[rand]);
+        img8.setImageResource(userImageList[rand]);
 
     }
 
