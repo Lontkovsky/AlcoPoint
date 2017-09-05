@@ -5,19 +5,40 @@
     android:layout_height="match_parent">
 
 
-
     <LinearLayout
         android:layout_gravity="center"
         android:layout_margin="4dp"
         android:layout_weight="1">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Rotate"/>
+        <ImageView
+            android:src = "@drawable/a"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:src = "@drawable/s"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:onClick="toChat"/>
+
+        <ImageView
+            android:src = "@drawable/d"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:onClick="toProfile"/>
+
+        <ImageView
+            android:src = "@drawable/f"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:onClick="toSettings"/>
+
     </LinearLayout>
-
-
 
 
     <TableRow
@@ -95,38 +116,25 @@
             android:src="@drawable/r" />
     </TableRow>
 
+
+
     <LinearLayout
         android:layout_gravity="center"
         android:layout_margin="4dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:src = "@drawable/a"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark" />
+            android:text="-" />
 
-        <ImageView
-            android:src = "@drawable/s"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="toChat"/>
-
-        <ImageView
-            android:src = "@drawable/d"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:onClick="toProfile"/>
-
-        <ImageView
-            android:src = "@drawable/f"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:onClick="toSettings"/>
+            android:text="+"/>
 
     </LinearLayout>
 
