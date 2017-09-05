@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlcoPoint.iml" filepath="$PROJECT_DIR$/AlcoPoint.iml" />
       <module fileurl="file://$PROJECT_DIR$/Alcopoint.iml" filepath="$PROJECT_DIR$/Alcopoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
