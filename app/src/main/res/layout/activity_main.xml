@@ -43,47 +43,6 @@
     </LinearLayout>
 
     <TableRow
-        android:id="@+id/row_0"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="2dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash1"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash2"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash3"
-            android:textColor="#fff" />
-
-
-    </TableRow>
-
-    <TableRow
         android:id="@+id/row_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -132,39 +91,32 @@
         android:layout_height="match_parent"
         android:layout_marginTop="2dp">
 
-        <TextView
+        <ImageView
+            android:src="@drawable/first"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash4"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="#00000"
-            android:gravity="center"
-            android:padding="32dp"
-            android:textAllCaps="true"
             android:text="PROFILE"
             android:onClick="toProfile"
             android:textColor="#ed8404" />
 
-        <TextView
+        <ImageView
+            android:src="@drawable/th"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash5"
-            android:textColor="#fff" />
+            android:text="PROFILE"
+            android:onClick="toProfile"
+            android:textColor="#ed8404" />
+
+        <ImageView
+            android:src="@drawable/sec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PROFILE"
+            android:onClick="toProfile"
+            android:textColor="#ed8404" />
     </TableRow>
 
     <TableRow
@@ -207,47 +159,6 @@
     </TableRow>
 
 
-
-    <TableRow
-        android:id="@+id/row_5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="2dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash1"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash2"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ed8404"
-            android:gravity="center"
-            android:padding="32dp"
-            android:text="Alkash3"
-            android:textColor="#fff" />
-
-
-    </TableRow>
 
     <LinearLayout>
         <Button
