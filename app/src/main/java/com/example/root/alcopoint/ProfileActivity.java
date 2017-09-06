@@ -11,9 +11,10 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
     }
 
-    public void toChat(View view)
+        public void toChat(View view)
     {
         Intent intent = new Intent(ProfileActivity.this, ChatActivity.class);
         startActivity(intent);
