@@ -7,50 +7,41 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".UserAreaActivity">
+    tools:context=".LoginActivity">
 
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:hint="Username" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/etUsername"
-        android:ems="10"
+    <EditText android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/et_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        android:hint="Email"
+        android:textColorHint="#4A148C"
+        android:textSize="30dp"/>
+    <EditText android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et_email"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:textColorHint="#4A148C"
+        android:textSize="30dp"
+        android:id="@+id/et_password"
+        />
 
-    <Button
-        android:id="@+id/bSignIn"
-        android:layout_width="wrap_content"
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/etPassword"
-        android:text="Sign In" />
+        android:layout_below="@+id/et_password"
+        android:layout_marginTop="20dp"
+        >
+        <Button android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Авторизация"
+            android:layout_weight="1"
+            android:id="@+id/btn_sign_in"/>
+        <Button android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Регистрация"
+            android:id="@+id/btn_registration"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Register Here"
-        android:id="@+id/tvRegisterLink"
-        android:layout_below="@+id/bSignIn"
-        android:layout_centerHorizontal="true" />
+    </LinearLayout>
 </RelativeLayout>

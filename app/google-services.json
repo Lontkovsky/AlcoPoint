@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "338675445498",
+    "firebase_url": "https://alcopoint-f3cfd.firebaseio.com",
+    "project_id": "alcopoint-f3cfd",
+    "storage_bucket": "alcopoint-f3cfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338675445498:android:d66f06034db11b7b",
+        "android_client_info": {
+          "package_name": "com.example.root.alcopoint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338675445498-d6r61ok2llhkgmq8ik8dn6br2fi7qskl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.root.alcopoint",
+            "certificate_hash": "7f7bbfa59eae95b323770cf6917439315fe7f3cf"
+          }
+        },
+        {
+          "client_id": "338675445498-m4bv2r609pavpcstajhnpon9skmoj57b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4m6rJLZ66NWuPId0-kbqoTQS1xIcCbTA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338675445498-m4bv2r609pavpcstajhnpon9skmoj57b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
