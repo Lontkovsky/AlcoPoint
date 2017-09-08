@@ -34,7 +34,8 @@
             android:label="Profile" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".UserAreaActivity"></activity>
+        <activity android:name=".UserAreaActivity" />
+        <activity android:name=".ListUsers"></activity>
     </application>
 
 </manifest>
