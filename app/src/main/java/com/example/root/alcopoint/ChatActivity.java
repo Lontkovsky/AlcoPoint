@@ -22,7 +22,7 @@ public class ChatActivity extends AppCompatActivity {
 
     public void toProfile(View view)
     {
-        Intent intent = new Intent(ChatActivity.this, ProfileActivity.class);
+        Intent intent = new Intent(ChatActivity.this, Details.class);
         startActivity(intent);
     }
 

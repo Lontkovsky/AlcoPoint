@@ -245,4 +245,21 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
             }
         });
     }
+
+    public void toChat(View view) {
+        Intent intent = new Intent(Details.this, ChatActivity.class);
+        startActivity(intent);
+    }
+
+    public void toMain(View view) {
+        Intent intent = new Intent(Details.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void toSettings(View view) {
+        Intent intent = new Intent(Details.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+
 }
