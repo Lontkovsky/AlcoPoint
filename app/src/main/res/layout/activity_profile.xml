@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -46,18 +46,27 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:id="@+id/rv_list_tasks"
+        android:layout_marginTop="27dp">
+    </android.support.v7.widget.RecyclerView>
 
-        <Button
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="toLogin"
-            android:onClick="toLogin"/>
+    <EditText android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/et_new_tasks"
+        android:layout_toStartOf="@+id/btn_add"
+        android:layout_toLeftOf="@+id/btn_add" />
 
-    </LinearLayout>
+    <Button android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/et_new_tasks"
+        android:layout_alignBottom="@+id/et_new_tasks"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btn_add"
+        android:text="New"
+        android:layout_alignParentRight="true" />
 
-</LinearLayout>
+</RelativeLayout>
