@@ -50,9 +50,6 @@
         <activity
             android:name=".SettingsActivity"
             android:label="Settings" />
-        <activity
-            android:name=".ProfileActivity"
-            android:label="Profile" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ListUsers" />
         <activity android:name=".RxEditText" />
