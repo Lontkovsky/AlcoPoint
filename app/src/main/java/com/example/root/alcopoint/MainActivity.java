@@ -1,37 +1,80 @@
 package com.example.root.alcopoint;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
+
+import static com.example.root.alcopoint.Details.createTempImageFile;
+import static com.example.root.alcopoint.R.drawable.i;
 
 public class MainActivity extends AppCompatActivity {
 
 
+    private ImageView mIVpicture;
 
+    private Button mBTNaddPicture;
 
+    private File mTempPhoto;
+
+    private String mImageUri = "";
+
+    private String mRereference = "";
+
+    private StorageReference mStorageRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mIVpicture = (ImageView) findViewById(R.id.iv_picture);
 
+        File localFile = null;
 
+        mRereference = getIntent().getStringExtra("Reference");
+        mStorageRef = FirebaseStorage.getInstance().getReference();
 
+        try {
+            localFile = createTempImageFile(getExternalCacheDir());
+            final File finalLocalFile = localFile;
+
+            mStorageRef.child("images/" + mRereference).getFile(localFile)
+                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                            Picasso.with(getBaseContext())
+                                    .load(Uri.fromFile(finalLocalFile))
+                                    .into(mIVpicture);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.i("Load","" + e);
+                }
+            });
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 
     public void toChat(View view)
     {
@@ -59,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void changePlus(View view){
-        int [] userImageList = new int[]{R.drawable.e, R.drawable.i, R.drawable.q, R.drawable.r, R.drawable.t, R.drawable.u,R.drawable.w, R.drawable.y};
+        int [] userImageList = new int[]{R.drawable.e, i, R.drawable.q, R.drawable.r, R.drawable.t, R.drawable.u,R.drawable.w, R.drawable.y};
         Random random = new Random();
         Integer rand = random.nextInt(userImageList.length - 1);
         ImageView img1 = (ImageView) findViewById(R.id.section1);
@@ -82,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeMinus(View view){
-        int [] userImageList = new int[]{R.drawable.e, R.drawable.i, R.drawable.q, R.drawable.r, R.drawable.t, R.drawable.u,R.drawable.w, R.drawable.y};
+        int [] userImageList = new int[]{R.drawable.e, i, R.drawable.q, R.drawable.r, R.drawable.t, R.drawable.u,R.drawable.w, R.drawable.y};
         Random random = new Random();
         Integer rand = random.nextInt(userImageList.length - 1);
         ImageView img1 = (ImageView) findViewById(R.id.section1);

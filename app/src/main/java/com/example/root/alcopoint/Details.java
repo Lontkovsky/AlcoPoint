@@ -1,21 +1,17 @@
 package com.example.root.alcopoint;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +34,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class Details extends AppCompatActivity implements View.OnClickListener{
+public class Details extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView mIVpicture;
 
@@ -54,6 +50,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
     private static final int REQUEST_CODE_TAKE_PHOTO = 103;
 
     private StorageReference mStorageRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +81,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
                     }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Log.i("Load","" + e);
+                    Log.i("Load", "" + e);
                 }
             });
 
@@ -92,7 +89,6 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
             e.printStackTrace();
         }
     }
-
 
 
     //Метод для добавления фото
@@ -104,16 +100,16 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
         boolean isWritePermissionGranted = ActivityCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
 
         //Если разрешения != true
-        if(!isCameraPermissionGranted || !isWritePermissionGranted) {
+        if (!isCameraPermissionGranted || !isWritePermissionGranted) {
 
             String[] permissions;//Разрешения которые хотим запросить у пользователя
 
             if (!isCameraPermissionGranted && !isWritePermissionGranted) {
-                permissions = new String[] {android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                permissions = new String[]{android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
             } else if (!isCameraPermissionGranted) {
-                permissions = new String[] {android.Manifest.permission.CAMERA};
+                permissions = new String[]{android.Manifest.permission.CAMERA};
             } else {
-                permissions = new String[] {android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                permissions = new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
             }
             //Запрашиваем разрешения у пользователя
             ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_PERMISSION_RECEIVE_CAMERA);
@@ -138,7 +134,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
                 intentList = addIntentsToList(this, intentList, takePhotoIntent);
 
                 if (!intentList.isEmpty()) {
-                    chooserIntent = Intent.createChooser(intentList.remove(intentList.size() - 1),"Choose your image source");
+                    chooserIntent = Intent.createChooser(intentList.remove(intentList.size() - 1), "Choose your image source");
                     chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, intentList.toArray(new Parcelable[]{}));
                 }
 
@@ -154,7 +150,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
 
     //Получаем абсолютный путь файла из Uri
     private String getRealPathFromURI(Uri uri) {
-        String[] projection = { MediaStore.Images.Media.DATA };
+        String[] projection = {MediaStore.Images.Media.DATA};
         @SuppressWarnings("deprecation")
         Cursor cursor = managedQuery(uri, projection, null, null, null);
         int columnIndex = cursor
@@ -198,17 +194,17 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.btn_add_picture){
+        if (v.getId() == R.id.btn_add_picture) {
             addPhoto();
         }
     }
 
     @Override
-    public void onActivityResult(int requestCode,int resultCode, Intent data){
-        super.onActivityResult(requestCode , resultCode , data);
-        switch (requestCode){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
             case REQUEST_CODE_TAKE_PHOTO:
-                if(resultCode == RESULT_OK) {
+                if (resultCode == RESULT_OK) {
                     if (data != null && data.getData() != null) {
                         mImageUri = getRealPathFromURI(data.getData());
 
@@ -229,19 +225,19 @@ public class Details extends AppCompatActivity implements View.OnClickListener{
         }
     }
 
-    public void uploadFileInFireBaseStorage (Uri uri){
+    public void uploadFileInFireBaseStorage(Uri uri) {
         UploadTask uploadTask = mStorageRef.child("images/" + mRereference).putFile(uri);
         uploadTask.addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                 double progress = (100.0 * taskSnapshot.getBytesTransferred());
-                Log.i("Load","Upload is " + progress + "% done");
+                Log.i("Load", "Upload is " + progress + "% done");
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 Uri donwoldUri = taskSnapshot.getMetadata().getDownloadUrl();
-                Log.i("Load" , "Uri donwlod" + donwoldUri);
+                Log.i("Load", "Uri donwlod" + donwoldUri);
             }
         });
     }
