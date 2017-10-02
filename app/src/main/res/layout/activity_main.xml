@@ -46,24 +46,36 @@
         android:layout_margin="4dp"
         android:layout_weight="1">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/q" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/w" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/e" />
 
@@ -77,26 +89,34 @@
         android:layout_margin="4dp"
         android:layout_weight="1">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/r" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/iv_picture"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:onClick="toProfile"
             app:civ_border_width="2dp"
             app:civ_border_color="#fff"/>
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/q" />
     </TableRow>
@@ -106,23 +126,35 @@
         android:layout_margin="4dp"
         android:layout_weight="1">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/w" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/y" />
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="toProfile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
             android:id="@+id/section8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/r" />
     </TableRow>
