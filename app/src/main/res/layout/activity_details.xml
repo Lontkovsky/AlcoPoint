@@ -33,7 +33,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="#fff"
             android:src="@drawable/d" />
 
         <ImageView
