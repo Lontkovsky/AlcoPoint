@@ -7,6 +7,8 @@ import android.view.View;
 
 public class ChatActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,4 +33,7 @@ public class ChatActivity extends AppCompatActivity {
         Intent intent = new Intent(ChatActivity.this, SettingsActivity.class);
         startActivity(intent);
     }
+
+
+
 }

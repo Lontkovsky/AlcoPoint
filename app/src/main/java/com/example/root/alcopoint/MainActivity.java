@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.util.Random;
 
 import static com.example.root.alcopoint.Details.createTempImageFile;
-import static com.example.root.alcopoint.R.drawable.i;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Log.i("Load","" + e);
+                    Log.i("Load", "" + e);
                 }
             });
 
@@ -76,35 +75,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void toChat(View view)
-    {
+    public void toChat(View view) {
         Intent intent = new Intent(MainActivity.this, ChatActivity.class);
         startActivity(intent);
     }
 
-    public void toProfile(View view)
-    {
+    public void toProfile(View view) {
         Intent intent = new Intent(MainActivity.this, Details.class);
         startActivity(intent);
     }
 
-    public void toSettings(View view)
-    {
+    public void toSettings(View view) {
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
         startActivity(intent);
     }
 
 
-
-
-
-
-
-
-    public void changePlus(View view){
-        int [] userImageList = new int[]{R.drawable.e, i, R.drawable.q, R.drawable.r, R.drawable.t, R.drawable.u,R.drawable.w, R.drawable.y};
+    public void changePlus(View view) {
+        int[] userImageList = new int[]{R.drawable.user1, R.drawable.user2, R.drawable.user3, R.drawable.user4, R.drawable.user5, R.drawable.user6, R.drawable.user7, R.drawable.user8, R.drawable.user9, R.drawable.user10, R.drawable.user11, R.drawable.user12, R.drawable.user14, R.drawable.user15, R.drawable.user16};
         Random random = new Random();
         Integer rand = random.nextInt(userImageList.length - 1);
+        Integer rand1 = random.nextInt(userImageList.length - 1);
+        Integer rand2 = random.nextInt(userImageList.length - 1);
+        Integer rand3 = random.nextInt(userImageList.length - 1);
+        Integer rand4 = random.nextInt(userImageList.length - 1);
+        Integer rand5 = random.nextInt(userImageList.length - 1);
+        Integer rand6 = random.nextInt(userImageList.length - 1);
+        Integer rand7 = random.nextInt(userImageList.length - 1);
         ImageView img1 = (ImageView) findViewById(R.id.section1);
         ImageView img2 = (ImageView) findViewById(R.id.section2);
         ImageView img3 = (ImageView) findViewById(R.id.section3);
@@ -114,20 +111,27 @@ public class MainActivity extends AppCompatActivity {
         ImageView img7 = (ImageView) findViewById(R.id.section7);
         ImageView img8 = (ImageView) findViewById(R.id.section8);
         img1.setImageResource(userImageList[rand]);
-        img2.setImageResource(userImageList[rand]);
-        img3.setImageResource(userImageList[rand]);
-        img4.setImageResource(userImageList[rand]);
-        img5.setImageResource(userImageList[rand]);
-        img6.setImageResource(userImageList[rand]);
-        img7.setImageResource(userImageList[rand]);
-        img8.setImageResource(userImageList[rand]);
+        img2.setImageResource(userImageList[rand1]);
+        img3.setImageResource(userImageList[rand2]);
+        img4.setImageResource(userImageList[rand3]);
+        img5.setImageResource(userImageList[rand4]);
+        img6.setImageResource(userImageList[rand5]);
+        img7.setImageResource(userImageList[rand6]);
+        img8.setImageResource(userImageList[rand7]);
+
 
     }
 
-    public void changeMinus(View view){
-        int [] userImageList = new int[]{R.drawable.e, i, R.drawable.q, R.drawable.r, R.drawable.t, R.drawable.u,R.drawable.w, R.drawable.y};
+    public void changeMinus(View view) {
+        int[] userImageList = new int[]{R.drawable.user1, R.drawable.user2, R.drawable.user3, R.drawable.user4, R.drawable.user5, R.drawable.user6, R.drawable.user7, R.drawable.user8, R.drawable.user9, R.drawable.user10, R.drawable.user11, R.drawable.user12, R.drawable.user14, R.drawable.user15, R.drawable.user16};
         Random random = new Random();
-        Integer rand = random.nextInt(userImageList.length - 1);
+        Integer rand1 = random.nextInt(userImageList.length);
+        Integer rand2 = random.nextInt(userImageList.length);
+        Integer rand3 = random.nextInt(userImageList.length);
+        Integer rand4 = random.nextInt(userImageList.length);
+        Integer rand5 = random.nextInt(userImageList.length);
+        Integer rand6 = random.nextInt(userImageList.length);
+        Integer rand7 = random.nextInt(userImageList.length);
         ImageView img1 = (ImageView) findViewById(R.id.section1);
         ImageView img2 = (ImageView) findViewById(R.id.section2);
         ImageView img3 = (ImageView) findViewById(R.id.section3);
@@ -136,17 +140,17 @@ public class MainActivity extends AppCompatActivity {
         ImageView img6 = (ImageView) findViewById(R.id.section6);
         ImageView img7 = (ImageView) findViewById(R.id.section7);
         ImageView img8 = (ImageView) findViewById(R.id.section8);
-        img1.setImageResource(userImageList[rand]);
-        img2.setImageResource(userImageList[rand]);
-        img3.setImageResource(userImageList[rand]);
-        img4.setImageResource(userImageList[rand]);
-        img5.setImageResource(userImageList[rand]);
-        img6.setImageResource(userImageList[rand]);
-        img7.setImageResource(userImageList[rand]);
-        img8.setImageResource(userImageList[rand]);
+        img1.setImageResource(userImageList[rand1]);
+        img2.setImageResource(userImageList[rand2]);
+        img3.setImageResource(userImageList[rand3]);
+        img4.setImageResource(userImageList[rand4]);
+        img5.setImageResource(userImageList[rand5]);
+        img6.setImageResource(userImageList[rand6]);
+        img7.setImageResource(userImageList[rand7]);
+        img8.setImageResource(userImageList[rand1]);
 
     }
 
 
-    }
+}
 
