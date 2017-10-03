@@ -28,12 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView mIVpicture;
 
-    private Button mBTNaddPicture;
-
-    private File mTempPhoto;
-
-    private String mImageUri = "";
-
     private String mRereference = "";
 
     private StorageReference mStorageRef;
@@ -87,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void toSettings(View view) {
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void toUserProfile(View view) {
+        Intent intent = new Intent(MainActivity.this, userActivity.class);
         startActivity(intent);
     }
 
